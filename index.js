@@ -42,6 +42,7 @@ const grantAccessContainer = document.querySelector(".grant-location-container")
 const searchForm = document.querySelector("[data-searchForm]");
 const userInfoContainer = document.querySelector(".user-info-container");
 const loadingScreen = document.querySelector(".loading-container");
+const notFoundScreen = document.querySelector(".not-found-container");
 
 const API_KEY = "a0cda3d092110ba513a84c6abdbe43aa";
 
@@ -130,15 +131,24 @@ function renderWeatherInfo(weatherInfo) {
     const humidity = document.querySelector("[data-humidity]");
     const cloudiness = document.querySelector("[data-cloudiness]");
 
-    // fetch values from weatherInfo object and put it UI elements
-    cityName.innerText = weatherInfo?.name;
-    countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
-    desc.innerText = weatherInfo?.weather?.[0]?.description;
-    weatherIcon.src = `https://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-    temp.innerText = `${weatherInfo?.main?.temp} °C`;
-    windSpeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
-    humidity.innerText = `${weatherInfo?.main?.humidity}%`;
-    cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
+    if (weatherInfo?.cod === '404') {
+        notFoundScreen.classList.add("active");
+        userInfoContainer.classList.remove("active");
+        userInfoContainer.classList.remove("sub-container");
+        // return;
+    } else {
+        userInfoContainer.classList.add("sub-container");
+        // fetch values from weatherInfo object and put it UI elements
+        notFoundScreen.classList.remove("active");
+        cityName.innerText = weatherInfo?.name;
+        countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
+        desc.innerText = weatherInfo?.weather?.[0]?.description;
+        weatherIcon.src = `https://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
+        temp.innerText = `${weatherInfo?.main?.temp} °C`;
+        windSpeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
+        humidity.innerText = `${weatherInfo?.main?.humidity}%`;
+        cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
+    }
 }
 
 function showPosition(position) {
@@ -175,6 +185,7 @@ searchForm.addEventListener("submit", (e) => {
 async function fetchSearchWeatherInfo(city) {
     searchInput.value = "";
     loadingScreen.classList.add("active");
+    notFoundScreen.classList.remove("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
     

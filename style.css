@@ -106,6 +106,14 @@ h1 {
     display: flex;
 }
 
+.not-found-container {
+    display: none;
+}
+
+.not-found-container.active {
+    display: flex;
+}
+
 .loading-container p {
     text-transform: uppercase;
 }
