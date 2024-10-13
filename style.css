@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -206,7 +208,7 @@ h1 {
     display: flex;
 }
 
- .form-container input {
+.form-container input {
     all: unset;
     width: calc(100% - 80px);
     height: 40px;
@@ -231,4 +233,14 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+}
+
+@media (max-width: 650px) {
+    .parameter-container {
+        flex-direction: column;
+    }
+
+    .parameter {
+        width: 100%;
+    }
 }
