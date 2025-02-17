@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  font-family: "Merriweather", serif;
+}
+
+@theme {
+  --color-dark1: #112D4E;
+  --color-dark2: #3F72AF;
+  --color-light1: #DBE2EF;
+  --color-light2: #F9F7F7;
+  --color-tab: rgba(219, 226, 239, 0.5)
+}
+
+@utility blue-background {
+  background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
