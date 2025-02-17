@@ -72,6 +72,19 @@ A simple and elegant weather application built with React and TypeScript. This a
 
 🔗 **[Live Demo](https://ms-weather-app.vercel.app/)**
 
+
+---
+
+## Output
+![Screenshot 1](/output/Screenshot%20(72).png)
+![Screenshot 2](/output/Screenshot%20(91).png)
+![Screenshot 3](/output/Screenshot%20(92).png)
+![Screenshot 4](/output/Screenshot%20(109).png)
+![Screenshot 5](/output/Screenshot%20(135).png)
+![Screenshot 6](/output/Screenshot%20(146).png)
+![Screenshot 7](/output/Screenshot%20(371).png)
+![Screenshot 8](/output/Screenshot%20(372).png)
+
 ---
 
 ## 📒 Acknowledgments 
