@@ -1,15 +1,19 @@
-# Weather App ☀️
+# ⛅ Weather App
 
 A simple and elegant weather application built with React and TypeScript. This app allows users to fetch weather information based on their current location or search for weather details by city name.
 
-## Features ⚙️
+---
+
+## ⚙️ Features
 
 - Fetch weather information based on user's current location.
 - Search for weather details by city name.
 - Display weather details including temperature, humidity, wind speed, and cloudiness.
 - Responsive design for a seamless experience on both desktop and mobile devices.
 
-## Installation ⬇️
+---
+
+## ⬇️ Installation 
 
 1. Clone the repository:
     ```bash
@@ -26,8 +30,9 @@ A simple and elegant weather application built with React and TypeScript. This a
     ```env
     VITE_API_KEY=your_openweathermap_api_key
     ```
+---
 
-## Usage 📂
+## 📂 Usage
 
 1. Start the development server:
     ```bash
@@ -38,7 +43,9 @@ A simple and elegant weather application built with React and TypeScript. This a
 
 3. Use the app to fetch weather information based on your location or search for weather details by city name.
 
-## Project Structure 🩻
+---
+
+## 🩻 Project Structure 
 
 ```
 /src
@@ -59,7 +66,15 @@ A simple and elegant weather application built with React and TypeScript. This a
   index.css
 ```
 
-## Acknowledgments 📒
+---
+
+## 🌞 Check Now!
+
+🔗 **[Live Demo](https://ms-weather-app.vercel.app/)**
+
+---
+
+## 📒 Acknowledgments 
 
 - [OpenWeatherMap](https://openweathermap.org/) for providing the weather API.
 - [React](https://reactjs.org/) for the powerful UI library.
